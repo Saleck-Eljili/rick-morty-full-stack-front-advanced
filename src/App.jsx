@@ -1,9 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
+import Card from "./components/Card/Card";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 function App() {
   return(
     <Router>
@@ -22,9 +24,20 @@ function App() {
 }
 
 const Home = () => {
+  
+  let [fetchedData, updateFetchedData] = useState([]);
+  let { results } = fetchedData;
+  let api = `https://rickandmortyapi.com/api/character/`;
+
+  useEffect(() => {
+    (async function () {
+      let data = await fetch(api).then((res) => res.json());
+      updateFetchedData(data);
+    })();
+  }, [api]);
   return (
     <div className="App">
-      home
+      <Card page="/" results={results} />
     </div>
   );
 };
