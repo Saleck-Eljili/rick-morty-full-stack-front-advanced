@@ -11,7 +11,7 @@ function App() {
         <Navbar />
       </div>
       <Routes>
-
+        <Route path="/" element={<Home />} />
         <Route path="/episodes" element={<Episodes />} />
 
         <Route path="/location" element={<Location />} />
@@ -20,5 +20,13 @@ function App() {
     </Router>
   );
 }
+
+const Home = () => {
+  return (
+    <div className="App">
+      home
+    </div>
+  );
+};
 
 export default App;

@@ -4,10 +4,10 @@ import "../../App.scss";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand navbar-light bg-light mb-4">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
       <div className="container">
         <Link to="/" className="navbar-brand fs-3 ubuntu">
-          Rick & Morty
+          Rick-Morty
         </Link>
         <style jsx>{`
           button[aria-expanded="false"] > .close {
@@ -30,10 +30,10 @@ const Navbar = () => {
           <span class="fas fa-times close text-dark"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-center"
+          className="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <div className="navbar-nav">
+          <div className="navbar-nav fs-5">
             <NavLink to="/" className="nav-link">
               Characters
             </NavLink>
