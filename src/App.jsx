@@ -37,7 +37,11 @@ const Home = () => {
   }, [api]);
   return (
     <div className="App">
-      <Card page="/" results={results} />
+      <div className="col-lg-8 col-12">
+            <div className="row">
+              <Card page="/" results={results} />
+            </div>
+          </div>
     </div>
   );
 };
