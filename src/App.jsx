@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 import Card from "./components/Card/Card";
+import CardDetails from "./components/Card/CardDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 function App() {
@@ -14,10 +15,13 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<CardDetails />} />
+
         <Route path="/episodes" element={<Episodes />} />
+        <Route path="/episodes/:id" element={<CardDetails />} />
 
         <Route path="/location" element={<Location />} />
-      
+        <Route path="/location/:id" element={<CardDetails />} />
       </Routes>
     </Router>
   );
