@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import PropTypes from 'prop-types'
 import ReactPaginate from "react-paginate";
 
 
@@ -106,6 +106,11 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
 
 };
 
+Pagination.propTypes = {
+  pageNumber: PropTypes.number,
+  info: PropTypes.object,
+  updatePageNumber: PropTypes.func
+}
 
 
 export default Pagination;

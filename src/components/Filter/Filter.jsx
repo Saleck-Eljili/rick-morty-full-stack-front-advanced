@@ -2,6 +2,7 @@ import React from "react";
 import Gender from "./category/Gender";
 import Species from "./category/Species";
 import Status from "./category/Status";
+import PropTypes from 'prop-types'
 
 const Filter = ({
   pageNumber,
@@ -43,5 +44,13 @@ const Filter = ({
     </div>
   );
 };
+
+Filter.propTypes = {
+  pageNumber: PropTypes.number,
+  updatePageNumber: PropTypes.func,
+  updateStatus: PropTypes.func,
+  updateGender: PropTypes.func,
+  updateSpecies: PropTypes.func,
+}
 
 export default Filter;
