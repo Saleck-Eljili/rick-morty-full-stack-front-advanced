@@ -13,7 +13,9 @@ const Pagination = React.lazy(() => import('./components/Pagination/Pagination')
 const Filter = React.lazy(() => import('./components/Filter/Filter'));
 function App() {
   return(
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><div class="spinner-border" role="status">
+    <span class="sr-only"></span>
+  </div><b>Loanding ...</b></div>}>
     <Router>
       <div className="App">
         <Navbar />
