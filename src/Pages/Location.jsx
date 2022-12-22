@@ -72,7 +72,7 @@ const Location = () => {
 
         </h5>
 
-        <h6 className="text-center">Type: {type === "" ? "Unknown" : type}</h6>
+        <h6 className="text-center">{type === "" ? "Unknown" : type}</h6>
 
       </div>
 
