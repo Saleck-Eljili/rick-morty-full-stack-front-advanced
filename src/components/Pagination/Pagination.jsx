@@ -48,9 +48,7 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
 
             }
 
-            .next,
-
-            .prev {
+            .next,.prev {
 
               display: none;
 
@@ -82,11 +80,11 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
 
         previousLabel="Prev"
 
-        previousClassName="fs-5 prev"
+        previousClassName="btn btn btn-light fs-5 prev"
 
-        nextClassName="fs-5 next"
+        nextClassName="btn btn btn-light fs-5 next"
 
-        activeClassName="active"
+        activeClassName="btn btn-light active"
 
         marginPagesDisplayed={width < 576 ? 1 : 2}
 
