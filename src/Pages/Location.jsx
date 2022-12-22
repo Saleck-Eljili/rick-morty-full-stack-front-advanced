@@ -80,7 +80,7 @@ const Location = () => {
 
         <div className="col-lg-3 col-12 mb-4">
 
-          <h4 className="text-center mb-4">Pick Location</h4>
+         
 
           <InputGroup name="Location" changeID={setNumber} total={126} />
 
