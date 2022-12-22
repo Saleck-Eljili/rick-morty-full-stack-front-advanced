@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
 
@@ -65,5 +66,10 @@ const Card = ({ page, results }) => {
 
   return <>{display}</>;
 };
+
+Card.propTypes = {
+  page: PropTypes.string,
+  results: PropTypes.array
+}
 
 export default Card;

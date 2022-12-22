@@ -30,10 +30,11 @@ npm start
 
 ## module
 
+- **prop-types**
+- **Code-Splitting**
 - **Sass**
 - **react-router-dom**
 - **popperjs/core**
 - **react-router-dom**
-- **Code-Splitting**
 - **react-paginate**
 - **bootstrap**
