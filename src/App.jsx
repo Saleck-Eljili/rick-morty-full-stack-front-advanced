@@ -1,17 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Navbar from "./components/Navbar/Navbar";
-import Episodes from "./Pages/Episodes";
-import Location from "./Pages/Location";
-import Card from "./components/Card/Card";
-import CardDetails from "./components/Card/CardDetails";
-import Search from "./components/Search/Search";
-import Pagination from "./components/Pagination/Pagination";
-import Filter from "./components/Filter/Filter";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,  Suspense } from "react";
+const Navbar = React.lazy(() => import('./components/Navbar/Navbar'));
+const Episodes = React.lazy(() => import('./Pages/Episodes'));
+const Location = React.lazy(() => import('./Pages/Location'));
+const Card = React.lazy(() => import('./components/Card/Card'));
+const CardDetails = React.lazy(() => import('./components/Card/CardDetails'));
+const Search = React.lazy(() => import('./components/Search/Search'));
+const Pagination = React.lazy(() => import('./components/Pagination/Pagination'));
+const Filter = React.lazy(() => import('./components/Filter/Filter'));
 function App() {
   return(
+    <Suspense fallback={<div>Loading...</div>}>
     <Router>
       <div className="App">
         <Navbar />
@@ -27,6 +29,7 @@ function App() {
         <Route path="/location/:id" element={<CardDetails />} />
       </Routes>
     </Router>
+    </Suspense>
   );
 }
 
