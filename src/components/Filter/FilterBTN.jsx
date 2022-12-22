@@ -6,7 +6,7 @@ const FilterBTN = ({ input, task, updatePageNumber, index, name }) => {
       <style jsx>
         {`
           .x:checked + label {
-            background-color: #0b5ed7;
+            background-color: #000000;
             color: white;
           }
           input[type="radio"] {
@@ -27,7 +27,7 @@ const FilterBTN = ({ input, task, updatePageNumber, index, name }) => {
             task(input);
             updatePageNumber(1);
           }}
-          className="btn btn-outline-primary"
+          className="btn"
           for={`${name}-${index}`}
         >
           {input}

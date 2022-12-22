@@ -82,9 +82,9 @@ const Pagination = ({ pageNumber, info, updatePageNumber }) => {
 
         previousLabel="Prev"
 
-        previousClassName="btn btn-primary fs-5 prev"
+        previousClassName="fs-5 prev"
 
-        nextClassName="btn btn-primary fs-5 next"
+        nextClassName="fs-5 next"
 
         activeClassName="active"
 
