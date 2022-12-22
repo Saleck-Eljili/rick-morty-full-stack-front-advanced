@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import styles from "./Search.module.scss";
 
 const Search = ({ setSearch, updatePageNumber }) => {
@@ -27,5 +28,8 @@ const Search = ({ setSearch, updatePageNumber }) => {
     </form>
   );
 };
-
+Search.propTypes = {
+  setSearch: PropTypes.func, 
+  updatePageNumber: PropTypes.func
+}
 export default Search;
